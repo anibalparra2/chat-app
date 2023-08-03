@@ -21,8 +21,14 @@ export class IngresarComponent {
     this.usuarioServicio.ingresar(this.credenciales).subscribe(
       {
         next: (datos) => {
-          console.log("Ingresa: "+this.credenciales.email);
-          this.enrutador.navigate(['chatear']);
+          console.log("retorna: "+JSON.stringify(datos));
+          var usuRetornado = JSON.stringify(datos);
+          if(usuRetornado.includes(this.credenciales.email)){
+            console.log("Ingresa: "+this.credenciales.email);
+            this.enrutador.navigate(['chatear']);
+          }else{
+            console.log("NO INGRESA:::");
+          }
           
         },
         error: (error: any) => {
