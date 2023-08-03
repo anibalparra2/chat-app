@@ -7,12 +7,14 @@ import { UsuarioListaComponent } from './usuario-lista/usuario-lista.component';
 import { HttpClientModule } from '@angular/common/http';
 import { IngresarComponent } from './ingresar/ingresar.component';
 import { FormsModule } from '@angular/forms';
+import { ChatearComponent } from './chatear/chatear.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsuarioListaComponent,
-    IngresarComponent
+    IngresarComponent,
+    ChatearComponent
   ],
   imports: [
     BrowserModule,
