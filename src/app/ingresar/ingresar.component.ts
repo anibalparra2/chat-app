@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class IngresarComponent {
 
+  public msg:string = "";
+
   credenciales: Credenciales = new Credenciales();
 
   constructor(private usuarioServicio: UsuarioService, private enrutador: Router){}
@@ -28,6 +30,7 @@ export class IngresarComponent {
             this.enrutador.navigate(['chatear']);
           }else{
             console.log("NO INGRESA:::");
+            this.msg = "Usuario y Password Incorrectos !!!";
           }
           
         },
